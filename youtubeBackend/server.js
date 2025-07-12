@@ -1,6 +1,7 @@
-import express from "express"
 import dotenv from "dotenv"
 dotenv.config();
+import express from "express"
+
 import "./config/connection.js"
 import userRoutes from "./routes/userRoutes.js"
 import channelRoutes from "./routes/channelRoutes.js"
