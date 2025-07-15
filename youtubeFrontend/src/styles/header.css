@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
@@ -7,7 +7,7 @@
 
 /* Header component  */
 
-.header {
+ .header {
     display: flex;
     padding: 0 16px;
     height: 60px;
@@ -286,7 +286,7 @@
 }
 
 /* Responsiveness */
-@media (max-width: 600px) {
+ @media (max-width: 600px) {
     button.menu {
         display: none;
     }
@@ -413,17 +413,17 @@
 
     .mbl-search-container.active .mbl-back-btn {
         display: block; /* Show back button when search container is active */
-    }
+     }
 
     .mbl-header-content.hidden {
         display: none; /* Hide header content when hidden class is applied */
-    }
+     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .logo-Container {
-        gap: 10px; /* Adjust gap for logo container */
-    }
+        gap: 10px;    /* Adjust gap for logo container  */
+     }
 
     .logo-Container p {
         font-size: medium;
@@ -456,8 +456,8 @@
         justify-content: space-around;
         width: 180px;
         align-items: center;
-    }
-    .header{
+    } 
+     .header{
         width: 100%;
     }
-}
+} 

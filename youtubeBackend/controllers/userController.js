@@ -94,6 +94,8 @@ export const logIn = async (req, res) => {
 
     try {
         const result = await User.findOne({ email });
+        console.log("Found user:", result);
+
         if (!result) {
             return res.status(404).json({ success: false, message: "user not found" });
         }

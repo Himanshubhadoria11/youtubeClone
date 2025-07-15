@@ -31,13 +31,14 @@ function Login() {
         }
 
         try {
-            const response = await fetch(`${API_URL}/api/users/login`, {
+            const response = await fetch(`${API_URL}/api/users/login`,{
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
             const result = await response.json();
+            console.log("Login Result:", result);
 
             if (!response.ok) {
                 throw new Error(result.message || "Login failed");
