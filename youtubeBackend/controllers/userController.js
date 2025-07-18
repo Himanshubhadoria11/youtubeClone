@@ -12,7 +12,10 @@ export const getAllUsers = async (req, res) => {
             return res.status(404).json({ success: false, message: "users not found" });
         }
         // Remove password from the response
-       const { password: userPassword, ...userWithoutPassword } = result.toObject();
+       //const { password: userPassword, ...userWithoutPassword } = result.toObject();
+      
+    
+
 
         res.status(200).json({ success: true, users: userWithoutPassword })
     } catch (err) {
