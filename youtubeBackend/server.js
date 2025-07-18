@@ -19,13 +19,24 @@ const port = process.env.PORT || 5200;
 //   origin: 'http://localhost:5173',
 //   credentials: true
 // }))
-app.use(cors({
+// app.use(cors({
 
-   origin: 'https://youtube-frontend-himanshu-bhadoria.vercel.app', // allow your frontend origin
-  //  origin: 'http://localhost:5173', // allow your frontend origin
+//    origin: 'https://youtube-frontend-himanshu-bhadoria.vercel.app', // allow your frontend origin
+//   //  origin: 'http://localhost:5173', // allow your frontend origin
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true,
+// }));
+const allowedOrigins = [
+  'https://youtube-frontend-himanshu-bhadoria.vercel.app',
+  'http://localhost:5173'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
+
 app.use(express.json());
 app.use("/api/users", userRoutes)
 app.use("/api/channel", channelRoutes)
