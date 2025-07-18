@@ -25,7 +25,9 @@ A React-based frontend for the YouTube Clone application, providing a seamless U
 
 ### Steps to Run the Project
 
-git clone https://github.com/Himanshubhadoria11/youtubeClone.git 
+git clone https://github.com/Himanshubhadoria11/youtubeClone.git
+
+cd youtubeClone
 
 cd youtubeFrontend
 

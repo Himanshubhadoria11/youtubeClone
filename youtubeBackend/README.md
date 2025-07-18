@@ -51,6 +51,8 @@ The backend for the YouTube Clone project using Node.js, Express.js, and MongoDB
 commands: 
   git clone https://github.com/Himanshubhadoria11/youtubeClone.git
 
+  cd youtubeClone
+
   cd youtubeBackend
   
   npm install
