@@ -1,4 +1,4 @@
-# **Backend: [youtubeBackend](https://github.com/Himanshubhadoria11/youtubeBackend.git)**
+# **Backend: [youtubeBackend](https://github.com/Himanshubhadoria11/youtubeClone.git)**
 
 The backend for the YouTube Clone project using Node.js, Express.js, and MongoDB. Handles user authentication, video and channel management, and comments with secure JWT-based authentication.
 
@@ -49,7 +49,7 @@ The backend for the YouTube Clone project using Node.js, Express.js, and MongoDB
 ## Installation
 
 commands: 
-  git clone https://github.com/Himanshubhadoria11/youtubeBackend.git
+  git clone https://github.com/Himanshubhadoria11/youtubeClone.git
 
   cd youtubeBackend
   
