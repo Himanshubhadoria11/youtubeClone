@@ -26,13 +26,35 @@ const port = process.env.PORT || 5200;
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //   credentials: true,
 // }));
+// const allowedOrigins = [
+//   'https://youtube-frontend-himanshu-bhadoria.vercel.app',
+//   'http://localhost:5173',
+//    'http://localhost:5174',
+//     'http://localhost:5175',
+//      'http://localhost:5176'
+// ];
+
+// app.use(cors({
+//   origin: allowedOrigins,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true,
+// }));
 const allowedOrigins = [
-  'https://youtube-frontend-himanshu-bhadoria.vercel.app',
-  'http://localhost:5173'
+  'https://youtube-frontend-himanshu-bhadoria.vercel.app'
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (
+      !origin ||
+      allowedOrigins.includes(origin) ||
+      /^http:\/\/localhost:\d{4}$/.test(origin)
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
